@@ -1,4 +1,8 @@
-let a = parseInt(prompt("Enter a")), b = parseInt(prompt("Enter b")), c = parseInt(prompt("Enter c"));
-let average = (a+b+c)/3;
-alert(`Average: ${average}`);
-
+let sum = 0, number, amountOfNumbers = 3;
+for (let i = 1; i <= amountOfNumbers; i++) {
+	do {
+	    number = parseInt(prompt("Enter " + i + " number"));
+	} while (isNaN(number));
+	sum += number;
+}
+alert(`Average: ${sum/amountOfNumbers}`);
