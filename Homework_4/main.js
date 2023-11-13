@@ -37,7 +37,7 @@ console.log(sum);
 
 let product = 1;
 
-for (let b = 15; b < 18; b++) {
+for (let b = 15; b < 36; b++) {
 	 product *= b;
 }
 
