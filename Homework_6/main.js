@@ -62,6 +62,7 @@ console.log(mainArray)
 Вихідний рядок та символи для видалення задає користувач.*/
 
 let eliminateSymbolsFromString = (string, symbolsToEliminate) => {
+	console.log(string, symbolsToEliminate)
 	let newString = "";
 	for (let i = 0; i < string.length; i++) {
 		!symbolsToEliminate.includes(string[i]) ? newString += string[i] : null;
@@ -69,4 +70,8 @@ let eliminateSymbolsFromString = (string, symbolsToEliminate) => {
 	return newString;
 }
 
-console.log(eliminateSymbolsFromString("hello world", ['l', 'd']));
+let string = prompt("Enter string"),
+	symbolsToEliminate = prompt("Enter symbols to eliminate");
+
+
+console.log(eliminateSymbolsFromString(string, Array.from(symbolsToEliminate)));
