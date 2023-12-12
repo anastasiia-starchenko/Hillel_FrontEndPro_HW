@@ -65,16 +65,12 @@ class Hamburger {
     }
     calculateCalories () {
         let toppingsCalories = 0;
-        if (this.toppings.length != 0) {
-            this.toppings.forEach((topping) => {toppingsCalories += topping.calories})
-        }
+        this.toppings.length != 0 ? this.toppings.forEach((topping) => {toppingsCalories += topping.calories}) : null;
         return SIZES[this.size].calories + NACHINKI[this.nachinka].calories + toppingsCalories;
     }
     calculatePrice () {
         let toppingsPrice = 0;
-        if (this.toppings.length != 0) {
-            this.toppings.forEach((topping) => {toppingsPrice += topping.price})
-        }
+        this.toppings.length != 0 ? this.toppings.forEach((topping) => {toppingsPrice += topping.price}) : null;
         return SIZES[this.size].price + NACHINKI[this.nachinka].price + toppingsPrice;
     }
 }
@@ -86,3 +82,77 @@ console.log("Price: " + hamburger.calculatePrice());
 hamburger.addTopping("sauce");
 console.log("Price with sauce: " + hamburger.calculatePrice());
 
+
+
+/////////////////////////////////////
+/*
+class Hamburger {
+    constructor(size, stuffing) {
+        this.size = size;
+        this.stuffing = stuffing;
+        this.toppings = []
+    }
+    static SIZE_SMALL = {
+        price: 50,
+        calories: 20
+    }
+    static SIZE_BIG = {
+        price: 100,
+        calories: 40
+    }
+    static STUFFING_CHEESE = {
+        price: 10,
+        calories: 20
+    }
+    static STUFFING_SALAD = {
+        price: 20,
+        calories: 5
+    }
+    static STUFFING_POTATO = {
+        price: 15,
+        calories: 10
+    }  
+    static TOPPING_MAYO = {
+        price: 20,
+        calories: 5
+    }
+    static TOPPING_SAUCE = {
+        price: 15,
+        calories: 0
+    }  
+    addTopping (topping) {
+        this.toppings.push(topping)
+    }
+    calculate () {
+        let toppingsCalories = 0;
+        this.toppings.length != 0 ? this.toppings.forEach((topping) => {toppingsCalories += topping.calories}) : null;        
+        return this.size.calories + this.stuffing.calories + toppingsCalories;
+    }
+    calculatePrice () {
+        let toppingsPrice = 0;
+        this.toppings.length != 0 ? this.toppings.forEach((topping) => {toppingsPrice += topping.price}) : null;
+        return this.size.price + this.stuffing.price + toppingsPrice;
+    }
+}*/
+
+
+
+// маленький гамбургер з начинкою з сиру
+//var hamburger = new Hamburger(Hamburger.SIZE_SMALL, Hamburger.STUFFING_CHEESE);
+
+// добавка з майонезу
+//hamburger.addTopping(Hamburger.TOPPING_MAYO);
+
+// запитаємо скільки там калорій
+//console.log("Calories: " + hamburger.calculate());
+
+// скільки коштує
+//console.log("Price: " + hamburger.calculatePrice());
+
+// я тут передумав і вирішив додати ще приправу
+//hamburger.addTopping(Hamburger.TOPPING_SAUCE);
+
+// А скільки тепер коштує?
+//console.log("Price with sauce: " + hamburger.calculatePrice());
+
+//console.log(hamburger)
