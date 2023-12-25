@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lesson 14</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body>
+		<div id="form-wrapper">
+			<form id="form">
+				<input type="text" placeholder="Name" id="name">
+				<input type="text" placeholder="Surname" id="surname">
+				<input type="text" placeholder="Date of birth" id="date-of-birth">
+				<div>
+				    <input type="radio" id="masculine" class="gender" name="gender" value="masculine" />
+				    <label for="huey">Masculine</label>
+				</div>
+				<div>
+				    <input type="radio" id="feminine" class="gender" name="gender" value="feminine" />
+				    <label for="feminine">Feminine</label>
+				</div>
+				<select id="city">
+					<option value="kyiv" selected>Kyiv</option>
+					<option value="lviv">Lviv</option>
+					<option value="odesa">Odesa</option>
+					<option value="other">Other</option>
+				</select>
+				<textarea id="adress" placeholder="Adress" style="resize: none;"></textarea>
+				<div id="languages-wrapper">
+					<label for="ukrainian"><input class="language-input" type="checkbox" name="ukrainian">Ukrainian</label>
+					<label for="english"><input class="language-input" type="checkbox" name="english">English</label>
+					<label for="german"><input class="language-input" type="checkbox" name="german">German</label>
+					<label for="french"><input class="language-input" type="checkbox" name="french">French</label>
+					<label for="spanish"><input class="language-input" type="checkbox" name="spanish">Spanish</label>
+				</div>
+			</form>
+			<button id="save-btn">Save</button>
+		</div>
+		<table id="table" class="d-none">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Surname</th>
+					<th>Date of birth</th>
+					<th>Gender</th>
+					<th>City</th>
+					<th>Adress</th>
+					<th>Languages</th>
+				</tr>
+			</thead>
+			<tbody id="table-tbody"></tbody>
+		</table>
+		<script type="text/javascript" src="main.js"></script>
+	</body>
+</html>
