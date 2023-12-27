@@ -1,9 +1,22 @@
+#form-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 #table, th, td {
     border: 1px solid #000;
 }
 #table {
     border-collapse: collapse;
 }
+#adress {
+    resize: none;
+    width: 100%;
+}
 .d-none {
     display: none;
+}
+input, select, textarea {
+    margin: 5px;
 }
