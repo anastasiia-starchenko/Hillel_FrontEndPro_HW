@@ -31,6 +31,7 @@ function addTaskToList (newTask) {
     addToDoInput.value = "";
 }
 
+// Change task status
 function changeTaskStatus (target, status) {
     target.parentElement.classList.toggle(`bg-secondary`)
     allTasks.forEach((task) => {
@@ -42,6 +43,8 @@ function changeTaskStatus (target, status) {
     localStorage.setItem("to-do", JSON.stringify(allTasks));
 }
 
+
+// Remove task from to-do list
 function removeTask (target) {
     allTasks.forEach((task) => {
         if (task.id == target.dataset.taskId) {
@@ -53,12 +56,13 @@ function removeTask (target) {
     target.parentElement.remove();
 }
 
+// Edit task name
 function editTask (target) {
     editToDoInput.value = target.previousElementSibling.textContent;
     target.parentElement.classList.add(`editing`);
-
 }
 
+// Remove classList
 function removeClasslist (className) {
     document.getElementsByClassName(className)[0] ? document.getElementsByClassName(className)[0].classList.remove(className) : "";
 }
