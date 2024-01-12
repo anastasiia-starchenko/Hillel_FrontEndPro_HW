@@ -24,10 +24,10 @@ fetchWeather.then(
     document.getElementById(`city`).textContent = weatherResponse["name"];
     document.getElementById(`temperature`).textContent = weatherResponse["main"]["temp"] + "°C";
     document.getElementById(`description`).innerHTML = weatherResponse["weather"][0]["description"] + weatherIcon;
-    document.getElementById(`pressure`).textContent = "Pressure: " + weatherResponse["main"]["pressure"] + "hPa";
-    document.getElementById(`humidity`).textContent = "Humidity: " + weatherResponse["main"]["humidity"] + "%";
-    document.getElementById(`wind-speed`).textContent = "Wind speed: " + weatherResponse["wind"]["speed"] + "meter/sec";
-    document.getElementById(`wind-direction`).textContent = "Wind direction: " + weatherResponse["wind"]["deg"] + "degrees";
+    document.getElementById(`pressure`).textContent = "Pressure: " + weatherResponse["main"]["pressure"] + " hPa";
+    document.getElementById(`humidity`).textContent = "Humidity: " + weatherResponse["main"]["humidity"] + " %";
+    document.getElementById(`wind-speed`).textContent = "Wind speed: " + weatherResponse["wind"]["speed"] + " meter/sec";
+    document.getElementById(`wind-direction`).textContent = "Wind direction: " + weatherResponse["wind"]["deg"] + " degrees";
     
 }).catch(
     err => console.log(err)
