@@ -1,0 +1,10 @@
+#error-text {
+    color: red;
+}
+.d-none {
+    display: none;
+}
+#comments {
+    display: flex;
+    gap: 20px;
+}
