@@ -1,0 +1,10 @@
+@import "variables";
+
+.d-none {
+    display: none;
+}
+body {
+    h1 {
+        color: $primary-color;
+    }
+}
