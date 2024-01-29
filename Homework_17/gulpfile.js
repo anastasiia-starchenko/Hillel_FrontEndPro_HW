@@ -1,4 +1,4 @@
-const {src, dest, watch} = require('gulp');
+const {src, dest, watch, parallel} = require('gulp');
 const fileinclude = require('gulp-file-include');
 const uglify = require("gulp-uglify");
 const sourcemap = require("gulp-sourcemaps");
@@ -48,3 +48,10 @@ exports.jsTask = jsTask;
 exports.htmlTask = htmlTask;
 exports.stylesTask = stylesTask;
 exports.watchTask = watchTask;
+
+exports.default = parallel(
+    htmlTask,
+    stylesTask,
+    jsTask,
+    watchTask
+)
