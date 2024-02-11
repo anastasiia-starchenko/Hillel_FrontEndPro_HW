@@ -23,7 +23,7 @@ function Body() {
 
     return (
         <div id="body-container">
-            <div className="smiles-container">
+            <div className="smiles-container" onClick={() => setWinner(null)}>
                 {Smiles.map((smile, index) => (<Smile key={index} smile={smile} index={index}></Smile>))}
             </div>
             <button className="btn btn-success show-results-btn" onClick={showResults}>Show Results</button>
