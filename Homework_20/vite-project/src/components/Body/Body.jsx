@@ -1,6 +1,6 @@
 import './Body.css'
 import Smiles from "../../assets/helper.js";
-import Smile from "../Navigation/Smile.jsx";
+import Smile from "../Smile/Smile.jsx";
 import {useState} from "react";
 
 
