@@ -2,16 +2,11 @@ import './Body.css'
 import Smiles from "../../assets/helper.js";
 import Smile from "../Smile/Smile.jsx";
 import {useState} from "react";
+import {getMax} from "../../assets/helper.js";
 
 
 function Body() {
     const [winner, setWinner] = useState(null);
-
-    const getMax = (object) => {
-        return Object.keys(object).filter(x => {
-            return object[x] == Math.max.apply(null, Object.values(object));
-        });
-    };
 
     const showResults = () => {
         let results = {}, maximumVotesIds, winners = [];
