@@ -1,0 +1,10 @@
+.form-container {
+    width: 100%;
+}
+#add-to-do-form {
+    display: flex;
+    justify-content: space-around;
+}
+#add-to-do-input {
+    width: 50%;
+}
