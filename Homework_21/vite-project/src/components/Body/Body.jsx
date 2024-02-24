@@ -6,7 +6,10 @@ import ToDoContainer from "../ToDoContainer/ToDoContainer.jsx";
 
 
 function Body() {
-    const [toDoTasks, setToDoTasks] = useState([]);
+    const [toDoTasks, setToDoTasks] = useState([
+        {name: "first new task", completed: false},
+        {name: "first completed task", completed: true}
+    ]);
 
     return (
         <div id="body-container">
